@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);
+//techcommunity-badges - desktop.scss
+
+/* badge banner changes*/
+/*added by Binjan; 2023.09.18; CSS to Display badges and banner header text on the home page banner */
+html {
+    &:not(.anon) {
+        :not(body[class*="category-"]),
+        :not(body[class*="tag-"]) {
+            #main {
+                .sag-banner-box,
+                .banner-box { 
+                    .container {
+                        @media only screen and (max-width: 810px) {
+                            max-width: 90%;
+                            width: 90%;
+
+                            #banner-content_wrap {
+                                width: 100%;
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+}

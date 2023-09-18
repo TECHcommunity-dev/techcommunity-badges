@@ -1,0 +1,14 @@
+main_heading_content:
+  type: string
+  default: "Welcome, {First_name} <br /> are you up for a challenge ->"
+  description:
+    en: Heading text to display on the home page banner. (Note- {First_name} placeholder will be replace by the first name of the loggeed-in User).
+number_of_badges:
+  default: 12
+  description:
+    en: Number of badges to display on home page banner.
+allowed_badges_id:
+  type: string
+  default: "9,100,12,45,103,25,5,104,6,18,2,3"
+  description:
+    en: List of allowed badges to display on the home page banner

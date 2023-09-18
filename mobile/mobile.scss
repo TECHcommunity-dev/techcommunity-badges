@@ -1,0 +1,15 @@
+//techcommunity-badges - mobile.scss
+
+/*added by Binjan; 2023.09.18; CSS to Display badges and banner header text on the home page banner */
+html {
+    &:not(.anon) {      
+        :not(body[class*="category-"]),
+        :not(body[class*="tag-"]) {
+            #main {            
+                .sag-banner-box {
+                    height: 450px;
+                }
+            }
+        }
+    }
+}

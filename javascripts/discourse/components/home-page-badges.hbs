@@ -1,0 +1,19 @@
+{{#if (not this.site.mobileView)}}
+<div id="banner-content">
+    <div class="sag-section-header-badges"> 
+        {{#if (not this.loading)}}
+            {{#each this.badges as |badge|}}
+            <a class={{badge.iconClass}} href={{badge.badgeURL}}>
+                <span class="badge-icon">
+                    {{d-icon badge.icon}}
+                </span>
+                <span class="badge-tooltip-text">
+                    <span class="badge-name">{{badge.name}}</span>
+                    <span class="badge-description">{{html-safe badge.description}}</span>
+                </span>
+            </a>        
+            {{/each}}
+        {{/if}}
+    </div>
+</div>
+{{/if}}
