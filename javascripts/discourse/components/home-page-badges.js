@@ -1,11 +1,6 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 import { tracked } from "@glimmer/tracking";
-import { action } from "@ember/object";
-import cookie, { removeCookie } from "discourse/lib/cookie";
-import { defaultHomepage } from "discourse/lib/utilities";
-import I18n from "I18n";
-import { iconHTML, iconNode } from "discourse-common/lib/icon-library";
 import UserBadge from "discourse/models/user-badge";
 import Badge from "discourse/models/badge";
 
@@ -30,8 +25,8 @@ export default class HomePageBadges extends Component {
 
     //Fetch the badges full object 
     loadBadges() {     
-        if (this.loading) { return; }
         this.loading = true;
+        if(!this.loading) { return; }
         this.badges = 'empty';
         var filteredBadges;
         var filteredBadgesAfterRemovingEarnedBadges;
@@ -126,7 +121,7 @@ export default class HomePageBadges extends Component {
                             }
                             // add additional property to HBS file
                             this.badges = this.prepareBadgeData(badgesToDisplay);
-                            // set loading variable = false
+                            // reset loading variable
                             this.loading = false;
                         }
                     );
